@@ -6,16 +6,17 @@ import express, {
 
 const app: Application = express()
 import { Pool } from "pg"
+import config from './config';
 
 
-const port = 5000;
+const port = config.port ;
 
 app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 
 const pool = new Pool({
-    connectionString: "postgresql://neondb_owner:npg_QFTu6UPcrSE7@ep-tiny-mountain-ap8lzqs8-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+    connectionString: config.connection_string,
 });
 
 const initBD = async () => {
@@ -32,7 +33,7 @@ const initBD = async () => {
             updated_at TIMESTAMP DEFAULT NOW()
         ) 
         `);
-        console.log('table created successfully');
+        console.log('Database created successfully');
     } catch (error) {
         console.log(error);
     }
@@ -207,5 +208,5 @@ app.delete('/api/users/:id', async (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`server listening on port ${port}`)
 })
