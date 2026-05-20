@@ -1,0 +1,13 @@
+Method - URL  Time: GET / 1779299173798
+
+Method - URL  Time: GET / 1779299254959
+
+
+Method - URL  Time: GET /api/user 1779299266295
+
+
+Method - URL  Time: GET / 1779299274094
+
+
+Method - URL  Time: GET /api/users 1779299288052
+
