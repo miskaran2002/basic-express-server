@@ -95,3 +95,60 @@ Method - URL  Time: POST /api/users 1779355696964
 
 Method - URL  Time: POST /api/users 1779355804398
 
+
+Method - URL  Time: POST /api/users 1779356297839
+
+
+Method - URL  Time: POST /api/auth/login 1779356343394
+
+
+Method - URL  Time: GET /api/users 1779356451980
+
+
+Method - URL  Time: GET /api/users 1779356516802
+
+
+Method - URL  Time: POST /api/auth/login 1779356614577
+
+
+Method - URL  Time: GET /api/users 1779356666106
+
+
+Method - URL  Time: GET /api/users 1779356814508
+
+
+Method - URL  Time: GET /api/users 1779358596394
+
+
+Method - URL  Time: GET /api/users 1779358649238
+
+
+Method - URL  Time: POST /api/users 1779358800677
+
+
+Method - URL  Time: GET /api/users 1779358811043
+
+
+Method - URL  Time: POST /api/auth/login 1779358921046
+
+
+Method - URL  Time: GET /api/users 1779358992619
+
+
+Method - URL  Time: GET /api/users 1779359175202
+
+
+Method - URL  Time: GET /api/users 1779359209731
+
+
+Method - URL  Time: GET /api/users 1779359271916
+
+
+Method - URL  Time: GET /api/users 1779359318924
+
+
+Method - URL  Time: GET /api/users 1779359617638
+
+
+Method - URL  Time: GET /api/users 1779360018867
+

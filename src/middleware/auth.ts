@@ -6,9 +6,14 @@ import type {
 import jwt, { type JwtPayload } from "jsonwebtoken";
 import config from "../config";
 import { pool } from "../db";
+import type { ROLES } from "../types/indes";
 
-const auth = () => {
+
+
+const auth = (...roles: ROLES[]) => {
     return async (req: Request, res: Response, next: NextFunction) => {
+
+        console.log(roles);
 
 
         try {
@@ -51,7 +56,7 @@ const auth = () => {
                 });
             }
 
-            if (!user.is_active) {
+            if (!user?.is_active) {
                 return res.status(403).json({
                     success: false,
                     message: "forbidden!!"
@@ -60,7 +65,18 @@ const auth = () => {
 
             }
 
+
+                if (roles.length && !roles.includes(user.role)) {
+                    return res.status(403).json({
+                        success: false,
+                        message: "forbidden!!,this role have no access to this resource"
+
+                    });
+                }
+
             req.user = decoded;
+
+            // console.log("User Role:", user.role);
 
             next();
 
