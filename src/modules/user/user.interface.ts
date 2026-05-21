@@ -9,5 +9,6 @@
     is_active?: boolean;
     createdAt: Date;
     updatedAt: Date;
+      role?: string;
  }
 
