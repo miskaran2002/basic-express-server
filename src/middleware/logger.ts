@@ -9,7 +9,7 @@ const logger =(req:Request, res:Response, next:NextFunction) => {
 
 
     fs.appendFile('logger.txt', log + '\n', (err) => {
-        console.log(err); 
+       
     });
 
 

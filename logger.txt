@@ -56,3 +56,30 @@ Method - URL  Time: GET /api/users 1779345384211
 
 Method - URL  Time: GET /api/users 1779345460422
 
+
+Method - URL  Time: GET /api/users 1779345821616
+
+
+Method - URL  Time: GET /api/users/4 1779345848787
+
+
+Method - URL  Time: GET /api/users/4 1779345883950
+
+
+Method - URL  Time: GET /api/users/4 1779346003665
+
+
+Method - URL  Time: GET /api/users/4 1779346019597
+
+
+Method - URL  Time: GET /api/users 1779346044285
+
+
+Method - URL  Time: GET /api/users 1779346057872
+
+
+Method - URL  Time: GET /api/users 1779346190168
+
+
+Method - URL  Time: GET /api/users 1779346199049
+
