@@ -47,9 +47,21 @@ password:string
   const accessToken =jwt.sign(jwtpayload,config.secret as string,{
     expiresIn: "1d"
   });
-  return {accessToken};
+ 
 
+   const refreshToken =jwt.sign(jwtpayload,config.refresh_secret as string,{
+    expiresIn: "1d"
+  });
+
+
+
+
+  return {accessToken, refreshToken};
 }
+
+
+
+ 
 
        
 
