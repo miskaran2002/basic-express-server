@@ -10,6 +10,8 @@ import { profileRoute } from './modules/profile/profile.route';
 import { authRoute } from './modules/auth/auth.route';
 import cookieParser from 'cookie-parser';
 import logger from './middleware/logger';
+import cors from 'cors';
+import globalErrorHandler from './middleware/globalErrorHandler';
 
 
 
@@ -19,6 +21,11 @@ app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(cookieParser());
+const corsOptions = {
+    origin: 'http://localhost:3000', // Replace with your client's origin
+   optionsSuccessStatus: 200 // For legacy browser support
+};
+app.use(cors(corsOptions));
 
 
 
@@ -37,6 +44,10 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/api/users', userRoute);
 app.use('/api/profile', profileRoute);
 app.use("/api/auth",authRoute);
+
+
+// Global Error Handling Middleware
+app.use(globalErrorHandler);
 
 
 export default app;
